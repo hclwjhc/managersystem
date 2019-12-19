@@ -8,10 +8,10 @@
 			<result>/index.jsp</result>
 		</action>
 		<action name="login" class="com.woniu.action.UserAction" method="login">
-			<result>/index.jsp</result>
-			<result>/index.jsp</result>
-			<result>/index.jsp</result>
-			<result>/index.jsp</result>
+			<result name="student">/t1.jsp</result>
+			<result name="herdmaster">/herdmaster.jsp</result>
+			<result name="teacher">/teacher.jsp</result>
+			<result name="supervisor">/supervisor.jsp</result>
 		</action>
 	</package>
 </struts>

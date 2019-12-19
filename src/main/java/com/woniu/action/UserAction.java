@@ -20,9 +20,15 @@ public class UserAction {
 	}
 	public String login() {
 		String str = us.login(user);
-		if(str.equals("success")) {
-			return "success";
+		if(str.equals("student")) {
+			return "student";
+		}else if(str.equals("herdmaster")) {
+			return "herdmaster";
+		}else if(str.equals("teacher")) {
+			return "teacher";
+		}else if(str.equals("supervisor")) {
+			return "supervisor";
 		}
-		return "null";
+		return "fail";
 	}
 }

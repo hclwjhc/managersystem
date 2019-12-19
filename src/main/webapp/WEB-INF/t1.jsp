@@ -7,10 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="login.action" method="post">
-	<input type="text" name="user.uname"/>
-	<input type="password" name="user.upwd"/>
-	<button>submit</button>
-	</form>
+adsadsadsa
 </body>
 </html>

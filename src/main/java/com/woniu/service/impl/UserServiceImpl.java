@@ -22,11 +22,6 @@ public class UserServiceImpl implements IUserService {
 		ud.save(user);
 	}
 	@Override
-	public Integer getUid(User user) {
-		// TODO Auto-generated method stub
-		return ud.getUid(user);
-	}
-	@Override
 	public String login(User user) {
 		List<User> users = ud.findOneByName(user);
 		String uname = "";
@@ -34,11 +29,20 @@ public class UserServiceImpl implements IUserService {
 		for (User u : users) {
 			uname = u.getUname();
 			upwd = u.getUpwd();
+			if(user.getUname().equals(uname) && user.getUpwd().equals(upwd)) {
+				if(u.getRole().getRid().equals(1)) {
+					return "student";
+				}
+				else if(u.getRole().getRid().equals(2)) {
+					return "herdmaster";
+				}else if(u.getRole().getRid().equals(3)) {
+					return "teacher";
+				}else if(u.getRole().getRid().equals(4)) {
+					return "supervisor";
+				}
+			}
 		}
-		if(user.getUname().equals(uname) && user.getUpwd().equals(upwd)) {
-			return "success";
-		}
-		return "null";
+		return "fail";
 	}
 	
 	
