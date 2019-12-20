@@ -1,5 +1,5 @@
 package com.woniu.pojo;
-// Generated 2019-12-19 14:36:06 by Hibernate Tools 5.2.12.Final
+// Generated 2019-12-20 10:16:45 by Hibernate Tools 5.2.12.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,43 +9,34 @@ import java.util.Set;
  */
 public class Classes implements java.io.Serializable {
 
-	private int cid;
+	private Integer cid;
 	private Headmaster headmaster;
 	private Stage stage;
 	private Supervisor supervisor;
 	private Teacher teacher;
 	private String cname;
 	private String ctype;
-	private Set examrecords = new HashSet(0);
-	private Set checkrecords = new HashSet(0);
 	private Set students = new HashSet(0);
 
 	public Classes() {
 	}
 
-	public Classes(int cid) {
-		this.cid = cid;
-	}
-
-	public Classes(int cid, Headmaster headmaster, Stage stage, Supervisor supervisor, Teacher teacher, String cname,
-			String ctype, Set examrecords, Set checkrecords, Set students) {
-		this.cid = cid;
+	public Classes(Headmaster headmaster, Stage stage, Supervisor supervisor, Teacher teacher, String cname,
+			String ctype, Set students) {
 		this.headmaster = headmaster;
 		this.stage = stage;
 		this.supervisor = supervisor;
 		this.teacher = teacher;
 		this.cname = cname;
 		this.ctype = ctype;
-		this.examrecords = examrecords;
-		this.checkrecords = checkrecords;
 		this.students = students;
 	}
 
-	public int getCid() {
+	public Integer getCid() {
 		return this.cid;
 	}
 
-	public void setCid(int cid) {
+	public void setCid(Integer cid) {
 		this.cid = cid;
 	}
 
@@ -95,22 +86,6 @@ public class Classes implements java.io.Serializable {
 
 	public void setCtype(String ctype) {
 		this.ctype = ctype;
-	}
-
-	public Set getExamrecords() {
-		return this.examrecords;
-	}
-
-	public void setExamrecords(Set examrecords) {
-		this.examrecords = examrecords;
-	}
-
-	public Set getCheckrecords() {
-		return this.checkrecords;
-	}
-
-	public void setCheckrecords(Set checkrecords) {
-		this.checkrecords = checkrecords;
 	}
 
 	public Set getStudents() {

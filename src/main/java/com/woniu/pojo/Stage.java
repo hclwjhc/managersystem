@@ -1,5 +1,5 @@
 package com.woniu.pojo;
-// Generated 2019-12-19 14:36:06 by Hibernate Tools 5.2.12.Final
+// Generated 2019-12-20 10:16:45 by Hibernate Tools 5.2.12.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,7 +9,7 @@ import java.util.Set;
  */
 public class Stage implements java.io.Serializable {
 
-	private int sid;
+	private Integer sid;
 	private String sname;
 	private Set examrecords = new HashSet(0);
 	private Set teachers = new HashSet(0);
@@ -20,12 +20,7 @@ public class Stage implements java.io.Serializable {
 	public Stage() {
 	}
 
-	public Stage(int sid) {
-		this.sid = sid;
-	}
-
-	public Stage(int sid, String sname, Set examrecords, Set teachers, Set headmasters, Set classeses, Set students) {
-		this.sid = sid;
+	public Stage(String sname, Set examrecords, Set teachers, Set headmasters, Set classeses, Set students) {
 		this.sname = sname;
 		this.examrecords = examrecords;
 		this.teachers = teachers;
@@ -34,11 +29,11 @@ public class Stage implements java.io.Serializable {
 		this.students = students;
 	}
 
-	public int getSid() {
+	public Integer getSid() {
 		return this.sid;
 	}
 
-	public void setSid(int sid) {
+	public void setSid(Integer sid) {
 		this.sid = sid;
 	}
 

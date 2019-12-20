@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2019-12-19 14:36:06 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-12-20 10:16:45 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
     <class catalog="managermentsystem" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Classes" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="classes">
-        <id name="cid" type="int">
+        <id name="cid" type="java.lang.Integer">
             <column name="cid"/>
-            <generator class="assigned"/>
+            <generator class="identity"/>
         </id>
         <many-to-one class="com.woniu.pojo.Headmaster" embed-xml="true" fetch="select" insert="true" name="headmaster" not-found="exception" optimistic-lock="true" unique="false" update="true">
             <column name="hid"/>
@@ -24,18 +24,6 @@
         <property generated="never" lazy="false" name="ctype" optimistic-lock="true" type="string" unique="false">
             <column name="ctype"/>
         </property>
-        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="examrecords" optimistic-lock="true" sort="unsorted" table="examrecord">
-            <key on-delete="noaction">
-                <column name="cid"/>
-            </key>
-            <one-to-many class="com.woniu.pojo.Examrecord" embed-xml="true" not-found="exception"/>
-        </set>
-        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="checkrecords" optimistic-lock="true" sort="unsorted" table="checkrecord">
-            <key on-delete="noaction">
-                <column name="cid"/>
-            </key>
-            <one-to-many class="com.woniu.pojo.Checkrecord" embed-xml="true" not-found="exception"/>
-        </set>
         <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="students" optimistic-lock="true" sort="unsorted" table="student">
             <key on-delete="noaction">
                 <column name="cid"/>

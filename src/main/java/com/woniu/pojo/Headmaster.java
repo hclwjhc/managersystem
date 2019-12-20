@@ -1,5 +1,5 @@
 package com.woniu.pojo;
-// Generated 2019-12-19 14:36:06 by Hibernate Tools 5.2.12.Final
+// Generated 2019-12-20 10:16:45 by Hibernate Tools 5.2.12.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,7 +9,7 @@ import java.util.Set;
  */
 public class Headmaster implements java.io.Serializable {
 
-	private int hid;
+	private Integer hid;
 	private Stage stage;
 	private Supervisor supervisor;
 	private String hname;
@@ -19,12 +19,7 @@ public class Headmaster implements java.io.Serializable {
 	public Headmaster() {
 	}
 
-	public Headmaster(int hid) {
-		this.hid = hid;
-	}
-
-	public Headmaster(int hid, Stage stage, Supervisor supervisor, String hname, Set classeses, Set students) {
-		this.hid = hid;
+	public Headmaster(Stage stage, Supervisor supervisor, String hname, Set classeses, Set students) {
 		this.stage = stage;
 		this.supervisor = supervisor;
 		this.hname = hname;
@@ -32,11 +27,11 @@ public class Headmaster implements java.io.Serializable {
 		this.students = students;
 	}
 
-	public int getHid() {
+	public Integer getHid() {
 		return this.hid;
 	}
 
-	public void setHid(int hid) {
+	public void setHid(Integer hid) {
 		this.hid = hid;
 	}
 

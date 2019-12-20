@@ -1,5 +1,5 @@
 package com.woniu.pojo;
-// Generated 2019-12-19 14:36:06 by Hibernate Tools 5.2.12.Final
+// Generated 2019-12-20 10:16:45 by Hibernate Tools 5.2.12.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,7 +9,7 @@ import java.util.Set;
  */
 public class Teacher implements java.io.Serializable {
 
-	private int tid;
+	private Integer tid;
 	private Stage stage;
 	private Supervisor supervisor;
 	private String tname;
@@ -19,12 +19,7 @@ public class Teacher implements java.io.Serializable {
 	public Teacher() {
 	}
 
-	public Teacher(int tid) {
-		this.tid = tid;
-	}
-
-	public Teacher(int tid, Stage stage, Supervisor supervisor, String tname, Set students, Set classeses) {
-		this.tid = tid;
+	public Teacher(Stage stage, Supervisor supervisor, String tname, Set students, Set classeses) {
 		this.stage = stage;
 		this.supervisor = supervisor;
 		this.tname = tname;
@@ -32,11 +27,11 @@ public class Teacher implements java.io.Serializable {
 		this.classeses = classeses;
 	}
 
-	public int getTid() {
+	public Integer getTid() {
 		return this.tid;
 	}
 
-	public void setTid(int tid) {
+	public void setTid(Integer tid) {
 		this.tid = tid;
 	}
 

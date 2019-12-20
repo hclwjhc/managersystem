@@ -1,5 +1,5 @@
 package com.woniu.pojo;
-// Generated 2019-12-19 14:36:06 by Hibernate Tools 5.2.12.Final
+// Generated 2019-12-20 10:16:45 by Hibernate Tools 5.2.12.Final
 
 import java.util.Date;
 import java.util.HashSet;
@@ -11,9 +11,7 @@ import java.util.Set;
 public class Examrecord implements java.io.Serializable {
 
 	private Integer erid;
-	private Classes classes;
 	private Stage stage;
-	private Student student;
 	private String score;
 	private Date erdate;
 	private Set students = new HashSet(0);
@@ -21,10 +19,8 @@ public class Examrecord implements java.io.Serializable {
 	public Examrecord() {
 	}
 
-	public Examrecord(Classes classes, Stage stage, Student student, String score, Date erdate, Set students) {
-		this.classes = classes;
+	public Examrecord(Stage stage, String score, Date erdate, Set students) {
 		this.stage = stage;
-		this.student = student;
 		this.score = score;
 		this.erdate = erdate;
 		this.students = students;
@@ -38,28 +34,12 @@ public class Examrecord implements java.io.Serializable {
 		this.erid = erid;
 	}
 
-	public Classes getClasses() {
-		return this.classes;
-	}
-
-	public void setClasses(Classes classes) {
-		this.classes = classes;
-	}
-
 	public Stage getStage() {
 		return this.stage;
 	}
 
 	public void setStage(Stage stage) {
 		this.stage = stage;
-	}
-
-	public Student getStudent() {
-		return this.student;
-	}
-
-	public void setStudent(Student student) {
-		this.student = student;
 	}
 
 	public String getScore() {
