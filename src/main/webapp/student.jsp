@@ -20,12 +20,13 @@
 			<th>毕业时间</th>
 			<th>毕业学校</th>
 			<th>所学专业</th>
-			<th>考勤记录</th>
+			<th>操作</th>
+	<!--  		<th>考勤记录</th>
 			<th>考试记录</th>
 			<th>班主任</th>
 			<th>教师</th>
 			<th>班级</th>
-			<th>阶段</th>
+			<th>阶段</th> -->
 		</tr>
 		<s:iterator value="stus" status="i">
 		<tr>
@@ -39,20 +40,20 @@
 			<th><s:property value="edutime" /></th>
 			<th><s:property value="school" /></th>
 			<th><s:property value="domain" /></th>
-			<th><s:property value="checkrecord.crid" /></th>
+			<th>		
+				<a href="findCheckRecord.action?crid=${checkrecord.crid}" >查看考勤</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="findOneExam.action?erid=${examrecord.erid}" >查看考试成绩</a>
+			</th>
+	<!--  		<th><s:property value="checkrecord.crid" /></th>
 			<th><s:property value="examrecord.erid" /></th>
 			<th><s:property value="headmaster.hid" /></th>
 			<th><s:property value="teacher.tid" /></th>
 			<th><s:property value="classes.cid" /></th>
-			<th><s:property value="stage.sid" /></th>
+			<th><s:property value="stage.sid" /></th> -->
 		</tr>
-		<div align="center">
-		<a href="#" >查看考勤</a>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="findOneExam.action?erid=${examrecord.erid}" >查看考试成绩</a>
-		</div>
 		</s:iterator>
 	</table>
-	
+
 </body>
 </html>

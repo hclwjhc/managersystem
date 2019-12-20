@@ -19,5 +19,8 @@
 		<action name="findOneExam" class="com.woniu.action.ExamrecordAction" method="findOneExam">
 			<result>/studentExam.jsp</result>
 		</action>
+		<action name="findCheckRecord" class="com.woniu.action.CheckrecordAction" method="findCheckRecord">
+			<result>/studentCheckrecord.jsp</result>
+		</action>
 	</package>
 </struts>

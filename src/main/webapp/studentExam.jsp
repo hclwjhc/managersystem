@@ -13,7 +13,6 @@
 			<th>序号</th>
 			<th>成绩</th>
 			<th>考试时间</th>
-		
 			<th>阶段</th>
 		</tr>
 		<s:iterator value="exam" status="i">
