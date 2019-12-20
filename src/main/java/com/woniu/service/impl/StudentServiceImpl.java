@@ -19,5 +19,6 @@ public class StudentServiceImpl implements IStudentService {
 		List<Student> stu = sd.findAll();
 		return stu;
 	}
+	
 
 }

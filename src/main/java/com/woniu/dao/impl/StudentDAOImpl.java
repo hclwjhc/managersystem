@@ -17,5 +17,10 @@ public class StudentDAOImpl implements IStudentDAO {
 		// TODO Auto-generated method stub
 		return sessionFactory.getCurrentSession().createQuery("from Student").list();
 	}
+	@Override
+	public Student findOne(Integer id) {
+		// TODO Auto-generated method stub
+		return (Student) sessionFactory.getCurrentSession().get(Student.class, id);
+	}
 
 }

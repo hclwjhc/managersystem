@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table border="1" width="800">
-		<caption>照片管理</caption>
+	<table border="1" width="1200" align="center">
+		<caption style="font-size: xx-large;">学生信息</caption>
 		<tr>
 			<th>序号</th>
 			<th>姓名</th>
@@ -39,13 +39,18 @@
 			<th><s:property value="edutime" /></th>
 			<th><s:property value="school" /></th>
 			<th><s:property value="domain" /></th>
-			<th><s:property value="crid" /></th>
-			<th><s:property value="erid" /></th>
-			<th><s:property value="hid" /></th>
-			<th><s:property value="tid" /></th>
-			<th><s:property value="cid" /></th>
-			<th><s:property value="sid" /></th>
+			<th><s:property value="checkrecord.crid" /></th>
+			<th><s:property value="examrecord.erid" /></th>
+			<th><s:property value="headmaster.hid" /></th>
+			<th><s:property value="teacher.tid" /></th>
+			<th><s:property value="classes.cid" /></th>
+			<th><s:property value="stage.sid" /></th>
 		</tr>
+		<div align="center">
+		<a href="#" >查看考勤</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="findOneExam.action?erid=${examrecord.erid}" >查看考试成绩</a>
+		</div>
 		</s:iterator>
 	</table>
 	

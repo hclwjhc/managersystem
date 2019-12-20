@@ -8,10 +8,16 @@
 			<result>/index.jsp</result>
 		</action>
 		<action name="login" class="com.woniu.action.UserAction" method="login">
-			<result name="student">/t1.jsp</result>
+			<result name="student" type="redirectAction">/findAll.action</result>
 			<result name="herdmaster">/herdmaster.jsp</result>
 			<result name="teacher">/teacher.jsp</result>
 			<result name="supervisor">/supervisor.jsp</result>
+		</action>
+		<action name="findAll" class="com.woniu.action.StudentAction" method="findAll">
+			<result>/student.jsp</result>
+		</action>
+		<action name="findOneExam" class="com.woniu.action.ExamrecordAction" method="findOneExam">
+			<result>/studentExam.jsp</result>
 		</action>
 	</package>
 </struts>

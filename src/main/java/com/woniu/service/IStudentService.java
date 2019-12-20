@@ -6,4 +6,6 @@ import com.woniu.pojo.Student;
 
 public interface IStudentService {
 	List<Student> findAll();
+
+
 }

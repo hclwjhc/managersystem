@@ -6,4 +6,5 @@ import com.woniu.pojo.Student;
 
 public interface IStudentDAO {
 	List<Student> findAll();
+	Student findOne(Integer id);
 }
