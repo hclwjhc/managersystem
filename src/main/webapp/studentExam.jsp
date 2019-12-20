@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-</head>
+</head> 
 <body>
 	<table border="1" width="1200" align="center">
 		<caption style="font-size: xx-large;">学生成绩</caption>
