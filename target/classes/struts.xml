@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>  
+	<package name="mangermentsystem" extends="struts-default">
+		
+		
+		<action name="login" class="com.woniu.action.UserAction" method="login">
+			<result name="student">/t1.jsp</result>
+			<result name="herdmaster">/herdmaster.jsp</result>
+			<result name="teacher">/teacher.jsp</result>
+			<result name="supervisor" type="redirectAction">supervisorClassesFindAll.action</result>
+		</action>
+		<action name="supervisorClassesFindAll" class="com.woniu.action.SupervisorAction" method="supervisorClassesFindAll">
+			<result name="supervisoClasses" >/supervisor.jsp</result>
+		</action>
+		<action name="supervisorClassesSave" class="com.woniu.action.SupervisorAction" method="supervisorClassesSave">
+			<result name="supervisorClassesAdd" type="redirectAction">supervisorClassesFindAll.action</result>
+		</action>
+		
+		
+	</package>
+</struts>
