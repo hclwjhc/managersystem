@@ -46,7 +46,6 @@
 								    
 									     	<input type="submit" class="btn btn-info" value="登录" id="login_btn"/>
 									    	<input type="reset" class="btn btn-info" value="取消"/>
-								
 								</div> 
 							</div>
 						</form>
