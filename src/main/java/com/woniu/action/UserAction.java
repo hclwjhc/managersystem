@@ -10,7 +10,7 @@ public class UserAction {
 	@Autowired
 	private IUserService us;
 	private User user;
-
+ 
 	public User getUser() {
 		return user;
 	}
