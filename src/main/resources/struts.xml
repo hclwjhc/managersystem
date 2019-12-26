@@ -2,23 +2,73 @@
  <!DOCTYPE struts PUBLIC
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
-<struts>  
+<struts>
 	<package name="mangermentsystem" extends="struts-default">
-		
-		
-		<action name="login" class="com.woniu.action.UserAction" method="login">
-			<result name="student">/t1.jsp</result>
-			<result name="herdmaster">/herdmaster.jsp</result>
+
+		<action name="login" class="com.woniu.action.UserAction"
+			method="login">
+			<result name="student" type="redirectAction">/findAll.action</result>
+			<result name="headmaster">/herdmaster.jsp</result>
 			<result name="teacher">/teacher.jsp</result>
-			<result name="supervisor" type="redirectAction">supervisorClassesFindAll.action</result>
+			<result name="supervisor" type="redirectAction">supervisorClassesFindAll.action
+			</result>
 		</action>
-		<action name="supervisorClassesFindAll" class="com.woniu.action.SupervisorAction" method="supervisorClassesFindAll">
-			<result name="supervisoClasses" >/supervisor.jsp</result>
+
+		<!-- Student -->
+		<action name="findAll" class="com.woniu.action.StudentAction"
+			method="findAll">
+			<result>/student.jsp</result>
 		</action>
-		<action name="supervisorClassesSave" class="com.woniu.action.SupervisorAction" method="supervisorClassesSave">
-			<result name="supervisorClassesAdd" type="redirectAction">supervisorClassesFindAll.action</result>
+		<action name="findOneExam"
+			class="com.woniu.action.ExamrecordAction" method="findOneExam">
+			<result>/studentExam.jsp</result>
 		</action>
-		
-		
+		<action name="findCheckRecord"
+			class="com.woniu.action.CheckrecordAction" method="findCheckRecord">
+			<result>/studentCheckrecord.jsp</result>
+		</action>
+
+		<!-- Supervisor教育主管 -->
+		<action name="supervisorClassesFindAll"
+			class="com.woniu.action.SupervisorAction"
+			method="supervisorClassesFindAll">
+			<result name="supervisoClasses">/supervisor.jsp</result>
+		</action>
+		<!-- 班级创立界面 -->
+		<action name="supervisorClassesSave"
+			class="com.woniu.action.SupervisorAction"
+			method="supervisorClassesSave">
+			<result name="supervisorClassesAdd" type="redirectAction">supervisorClassesFindAll.action
+			</result>
+		</action>
+		<!-- 教师调职 -->
+		<action name="teacherFindAll"
+			class="com.woniu.action.TeacherAction" method="teacherFindAll">
+			<result name="showTeacher">/changeTeacher.jsp</result>
+		</action>
+		<!-- 班主任调职 -->
+		<action name="headmasterFindAll"
+			class="com.woniu.action.HeadmasterAction" method="headmasterFindAll">
+			<result name="showHeadmaster">/changeHeadmaster.jsp</result>
+		</action>
+		<!-- 老师调职成功返回班级界面 -->
+		<action name="teacherPosition"
+			class="com.woniu.action.TeacherAction"
+			method="teacherPosition">
+			<result name="teacherUpdate" type="redirectAction">supervisorClassesFindAll.action
+			</result>
+		</action> 
+		<!-- 班主任调职成功返回班级界面 -->
+		<action name="headmasterPosition"
+			class="com.woniu.action.HeadmasterAction"
+			method="headmasterPosition">
+			<result name="headmasterUpdate" type="redirectAction">supervisorClassesFindAll.action
+			</result>
+		</action> 
+
+
+
+
+
 	</package>
 </struts>

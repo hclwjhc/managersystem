@@ -9,7 +9,9 @@ import com.woniu.pojo.Classes;
 import com.woniu.pojo.Headmaster;
 import com.woniu.pojo.Supervisor;
 import com.woniu.pojo.Teacher;
+import com.woniu.service.IHeadmasterService;
 import com.woniu.service.ISupervisorService;
+import com.woniu.service.ITeacherService;
 
 
 @Controller
@@ -18,34 +20,26 @@ public class SupervisorAction {
 	@Autowired
 	ISupervisorService sups;
 	private List<Classes> classes;
-	
+	private Integer cid;
 	private Classes classess;
-	private Headmaster headmaster;
-	private Teacher teacher;
 	private Supervisor supervisor;
 	
-	public Headmaster getHeadmaster() {
-		return headmaster;
+	
+
+	public List<Classes> getClasses() {
+		return classes;
 	}
 
-	public void setHeadmaster(Headmaster headmaster) {
-		this.headmaster = headmaster;
+	public void setClasses(List<Classes> classes) {
+		this.classes = classes;
 	}
 
-	public Teacher getTeacher() {
-		return teacher;
+	public Integer getCid() {
+		return cid;
 	}
 
-	public void setTeacher(Teacher teacher) {
-		this.teacher = teacher;
-	}
-
-	public Supervisor getSupervisor() {
-		return supervisor;
-	}
-
-	public void setSupervisor(Supervisor supervisor) {
-		this.supervisor = supervisor;
+	public void setCid(Integer cid) {
+		this.cid = cid;
 	}
 
 	public Classes getClassess() {
@@ -56,23 +50,22 @@ public class SupervisorAction {
 		this.classess = classess;
 	}
 
-	public List<Classes> getClasses() {
-		return classes;
+	public Supervisor getSupervisor() {
+		return supervisor;
 	}
 
-	public void setClasses(List<Classes> classes) {
-		this.classes = classes;
+	public void setSupervisor(Supervisor supervisor) {
+		this.supervisor = supervisor;
 	}
-	
+
 	public String supervisorClassesFindAll() {
 		classes = sups.findAll();
 		return "supervisoClasses";
 	}
-	
+
 	public String supervisorClassesSave() {
-		System.out.println(classess.toString());
 		sups.save(classess);
 		return "supervisorClassesAdd";
 	}
-	
+
 }

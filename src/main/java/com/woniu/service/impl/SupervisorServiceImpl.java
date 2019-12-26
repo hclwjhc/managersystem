@@ -28,9 +28,14 @@ public class SupervisorServiceImpl implements ISupervisorService {
 		sd.save(classess);
 	}
 
-	public void update(Classes obj) {
+	public void update(Classes classess) {
 		// TODO Auto-generated method stub
-		sd.update(obj);
+		sd.update(classess);
+	}
+
+	public Classes findOne(Integer cid) {
+		// TODO Auto-generated method stub
+		return sd.findOne(cid);
 	}
 	
 	

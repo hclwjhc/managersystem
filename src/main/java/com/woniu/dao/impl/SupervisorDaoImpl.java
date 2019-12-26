@@ -27,10 +27,17 @@ public class SupervisorDaoImpl implements ISupervisorDao{
 		
 	}
 
-	public void update(Classes obj) {
+	public void update(Classes classess) {
 		// TODO Auto-generated method stub
-		sessionFactory.getCurrentSession().update(obj);;
+		sessionFactory.getCurrentSession().update(classess);
 	}
+
+	public Classes findOne(Integer cid) {
+		// TODO Auto-generated method stub
+		return (Classes) sessionFactory.getCurrentSession().get(Classes.class,cid);
+	}
+
+	
 	
 	
 }

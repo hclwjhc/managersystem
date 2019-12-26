@@ -1,6 +1,9 @@
 package com.woniu.action;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
+
+/*<<<<<<< HEAD=======>>>>>>> branch 'master' of https://github.com/birdprogrammer/mangerSys.git
+*/import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.woniu.pojo.User;

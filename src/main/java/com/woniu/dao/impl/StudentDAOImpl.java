@@ -8,15 +8,25 @@ import org.springframework.stereotype.Repository;
 
 import com.woniu.dao.IStudentDAO;
 import com.woniu.pojo.Student;
+
+/*<<<<<<< HEAD=======>>>>>>> branch 'master' of https://github.com/birdprogrammer/mangerSys.git
+*/	
 @Repository
 public class StudentDAOImpl implements IStudentDAO {
 	@Autowired
 	SessionFactory sessionFactory;
-	
+
 	@SuppressWarnings("unchecked")
 	public List<Student> findAll() {
 		// TODO Auto-generated method stub
 		return sessionFactory.getCurrentSession().createQuery("from Student").list();
+
+	}
+	
+	public Student findOne(Integer id) {
+		// TODO Auto-generated method stub
+		return (Student) sessionFactory.getCurrentSession().get(Student.class, id);
+
 	}
 
 }
